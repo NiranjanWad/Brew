@@ -1,0 +1,73 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-item style="height: 30%; background-color: #4c4c4c">
+        <ion-thumbnail item-start>
+          <img src="./assets/imgs/pp.png" style="border-radius: 50%; margin-top: 108px; margin-left: -9px">
+        </ion-thumbnail>
+        <h2>Niranjan</h2>
+        <p>niranjan.wad@gmail.com</p>
+      </ion-item>
+    <ion-list no-lines>
+      <button ion-item detail-none (click)="gotoConnect()" menuClose>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <ion-icon name="connectto"></ion-icon>
+                <!--<svg-icon src="../assets/imgs/connectto.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>-->
+            </ion-col>
+            <ion-col col-10>
+              <h4>Connect To</h4>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+            <!--<ion-icon name="git-network" md="md-git-network"><h4 style="display: inline">Connect To</h4> </ion-icon>-->
+
+      </button>
+      <button ion-item detail-none (click)="gotoSettings()" menuClose>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <!--<svg-icon src="../assets/imgs/setting.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>-->
+              <ion-icon name="setting"></ion-icon>
+            </ion-col>
+            <ion-col col-10>
+              <h4>Settings</h4>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </button>
+      <button ion-item detail-none (click)="goToHistory()" menuClose>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <!--<svg-icon src="../assets/imgs/history.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>-->
+              <ion-icon name="history"></ion-icon>
+            </ion-col>
+            <ion-col col-10>
+              <h4>History</h4>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </button>
+      <button ion-item detail-none (click)="goToCreateRecipe()" menuClose>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <!--<svg-icon src="../assets/imgs/create.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>-->
+              <ion-icon name="create"></ion-icon>
+            </ion-col>
+            <ion-col col-10>
+              <h4>Create a new recipe</h4>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>

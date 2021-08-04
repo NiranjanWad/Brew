@@ -1,0 +1,254 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Discovery</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header (click)="toggleSelection()" ion-item detail-none>
+      <h4>Beer Types </h4>
+      <svg-icon item-end src="../assets/imgs/arrowdown.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>
+      <expandable [expandHeight]="itemExpandHeight" [expanded]="itemExpanded">
+        <div style="display: flex;flex-wrap: wrap">
+            <button *ngFor="let item of beerArr" ion-button  (click)="select(item)" color="customColor" small>
+            {{item}}
+          </button>
+        </div>
+      </expandable>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-item detail-none no-lines>
+    <button ion-button small outline (click)="displayAll()" color="customColor2">All</button>
+  </ion-item>
+  <ng-container *ngIf ="beerInfoIsEmpty">
+    <ion-card (click)="goToDetails('Lucifer','Belgian Ales','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/belgian ales1.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/belgian ales1.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Lucifer</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>Belgian Ales</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+
+    <ion-card (click)="goToDetails('Strong Golden Ale','Belgian Ales','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/belgian ales2.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/belgian ales2.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Strong Golden Ale</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>Belgian Ales</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card (click)="goToDetails('Chris Wheat IPA 1','German Weizen','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/german weizen1.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/german weizen1.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Chris Wheat IPA 1</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>German Weizen</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card (click)="goToDetails('Weissbier','German Weizen','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/german weizen2.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/german weizen2.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Weissbier</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>German Weizen</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card (click)="goToDetails('First AIPA','IPA','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/IPA1.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/IPA1.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>First AIPA</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>IPA</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card (click)="goToDetails('Speidel 1 IPA','IPA','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/IPA2.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/IPA2.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Speidel 1 IPA</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>IPA</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card (click)="goToDetails('Durschtbier','Pale Lager','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/pale lager1.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img style="width: 100%;" src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/pale lager1.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Durschtbier</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>Belgian Ales</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card (click)="goToDetails('Luxe Pils','Pale Lager','https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/pale lager2.jpg?raw=true')">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src="https://raw.githubusercontent.com/jayjay300/WeBrewpics/master/pale lager2.jpg?raw=true">
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>Luxe Pils</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>Belgian Ales</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ng-container>
+  <ng-container *ngIf ="!beerInfoIsEmpty">
+    <ion-card *ngFor="let details of beerInfo" (click)="goToDetails(details.name,details.beerType,details.pic)">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <img src={{details.pic}}>
+          </ion-col>
+          <ion-col col-9>
+            <h4><b>{{details.name}}</b></h4>
+            <p>Yards Brewing Co.</p>
+            <!--<ion-rating></ion-rating>-->
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small  outline>{{details.beerType}}</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>Semi-Sweet</button>
+          </span>
+            <span item-left>
+            <button class="types" color="customColor2" ion-button small outline>4-5%</button>
+          </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ng-container>
+</ion-content>

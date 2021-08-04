@@ -1,0 +1,75 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+  font-family: Noto;
+  src: url("../assets/fonts/Noto sans.woff2");
+}
+
+
+@font-face {
+  font-family: NotoReg;
+  src: url("../assets/fonts/Noto sans Reg.woff2");
+}
+h2{
+  font-family: 'Noto' !important;
+  font-size: 14px !important;
+  margin-top: 103px !important;
+  color: #ffffff;
+}
+
+h4{
+  font-family: 'NotoReg' !important;
+  font-size: 12px !important;
+  color: #ffffff;
+}
+
+p{
+  font-family: 'NotoReg' !important;
+  color: #ffffff !important;
+  font-size: 12px;
+}
+
+.ion-md-connectto {
+  content: url(../assets/imgs/connectto.svg);
+  width: 15px;
+  //height: 32px;
+  //padding: 6px 4px 2px;
+  //opacity: 0.9;
+}
+.ion-md-setting {
+  content: url(../assets/imgs/setting.svg);
+  width: 15px;
+  //height: 32px;
+  //padding: 6px 4px 2px;
+  //opacity: 0.9;
+}
+
+.ion-md-history {
+  content: url(../assets/imgs/history.svg);
+  width: 15px;
+  //height: 32px;
+  //padding: 6px 4px 2px;
+  //opacity: 0.9;
+}
+
+.ion-md-create {
+  content: url(../assets/imgs/create.svg);
+  width: 15px;
+  //height: 32px;
+  //padding: 6px 4px 2px;
+  //opacity: 0.9;
+}

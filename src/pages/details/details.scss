@@ -1,0 +1,66 @@
+page-details {
+  @font-face {
+    font-family: NotoReg;
+    src: url("../../assets/fonts/Noto sans Reg.woff2");
+  }
+
+  @font-face {
+    font-family: Noto;
+    src: url("../../assets/fonts/Noto sans.woff2");
+  }
+
+  ion-col{
+    font-family: 'NotoReg' !important;
+    font-size: 12px !important;
+    color: #ffffff;
+  }
+  ion-card-header{
+    font-family: 'Noto' !important;
+    font-size: 16px !important;
+    color: #ff8d00 !important;
+  }
+
+  h4{
+    font-family: 'Noto' !important;
+    font-size: 16px !important;
+  }
+
+  .circle{
+    width:13%;
+    height:7%;
+    border-radius:50%;
+    background-color: #ff8d00;
+    position: absolute;
+    right:14%;
+  }
+
+  .bottom-right {
+    width:13%;
+    height:7%;
+    position: absolute;
+    //bottom: 2%;
+    right:16%;
+  }
+
+
+  .ion-md-add_to_list {
+    content: url(../assets/imgs/add_to_list.svg);
+    width: 15px;
+    //height: 32px;
+    //padding: 6px 4px 2px;
+    //opacity: 0.9;
+  }
+  //.adjust{
+  //  display: block !important;
+  //}
+
+  //#beername{
+  //   font-family: 'Noto' !important;
+  //   font-size: 14px !important;
+  // }
+  //
+  //#beerType{
+  //  font-family: 'Noto' !important;
+  //  font-size: 20px !important;
+  //}
+}

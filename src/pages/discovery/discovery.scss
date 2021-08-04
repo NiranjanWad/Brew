@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Noto;
+  src: url("../../assets/fonts/Noto sans.woff2");
+}
+
+@font-face {
+  font-family: NotoReg;
+  src: url("../../assets/fonts/Noto sans Reg.woff2");
+}
+
+.types{
+  font-size: 11px;
+}
+
+h4{
+  font-family: 'Noto' !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+}
+
+p{
+  font-family: 'NotoReg' !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+}
+
+.ion-md-arrowDown {
+  content: url(../assets/imgs/arrowDown.svg);
+  width: 15px;
+  //margin-left: 90% !important;
+  //display: inline-block;
+  //height: 32px;
+  //padding: 6px 4px 2px;
+  //opacity: 0.9;
+}

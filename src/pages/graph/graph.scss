@@ -1,0 +1,26 @@
+page-graph {
+  @font-face {
+    font-family: NotoReg;
+    src: url("../../assets/fonts/Noto sans Reg.woff2");
+  }
+
+  @font-face {
+    font-family: Noto;
+    src: url("../../assets/fonts/Noto sans.woff2");
+  }
+
+  ion-card-header{
+    font-family: 'Noto' !important;
+    font-size: 16px !important;
+    color: #ffffff !important;
+  }
+
+  .tempCurr{
+    display: inline;
+    color: #ffc41f !important;
+  }
+  .tempDesired{
+    display: inline;
+    color: #f2f2f2 !important;
+  }
+}
